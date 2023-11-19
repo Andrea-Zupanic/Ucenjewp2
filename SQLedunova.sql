@@ -67,15 +67,19 @@ insert into smjerovi (naziv,brojsati,cijena,upisnina,verificiran) values
 ('Java programiranje',225,1325.85,null, 1),
 ('Serviser', 225,1325.85,null,1);
 
+select * from smjerovi;
+
 insert into predavaci (ime,prezime,email) values
 ('Tomislav','Jakopec','tjakopec@gmail.com'),
 ('Shaquille', 'O''Neal','shaki@gmail.com');
 
+select * from predavaci;
 
 insert into polaznici (prezime,ime,email) values
 ('Županiæ','Tomislav','tomislav.zupanic333@gmail.com'),
 ('Županiæ','Andrea','andrea.zupanic10@gmail.com');
 
+select * from polaznici;
 
 insert into grupe (naziv,smjer,datumpocetka) values
 
@@ -83,6 +87,9 @@ insert into grupe (naziv,smjer,datumpocetka) values
 ('WP2',1,'2023-10-30 17:00:00'),
 ('JP28',2,'2023-04-24 19:00:00');
 
+select * from grupe;
 
 insert into clanovi (grupa,polaznik) values
 (2,1),(2,2);
+
+select * from clanovi;
