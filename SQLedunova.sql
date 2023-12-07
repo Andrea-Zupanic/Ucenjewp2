@@ -128,6 +128,9 @@ insert into clanovi (grupa,polaznik) values
 
 select * from clanovi;
 
+--UPDATE
+
+
 
 
 update polaznici set prezime='Kartik' where sifra=17;
@@ -162,11 +165,206 @@ update smjerovi set cijena=1489.52 where sifra=2;
 select* from smjerovi;
 
 
+
+--INSERT
+
+
+
 insert smjerovi (naziv)
 values ('python programiranje');
 delete from  smjerovi where sifra=4;
 
 
+
+
+--DELETE
+
+
 --delete from clanovi where polaznik=20;
 select * from polaznici;
+
+--edunova
+select * from grupe;
+
+select * from smjerovi where sifra=1;
+
+
+--INNER JOIN  
+
+
+
+
+select a.sifra,a.naziv, b.naziv as smjer
+from grupe a inner join smjerovi b
+on b.sifra = a.smjer;
+
+
+
+select a.sifra,a.naziv, b.naziv as smjer,
+a.datumpocetka, c.ime, c.prezime,
+concat(e.ime, ' ' , e.prezime) as polaznik
+from grupe a inner join smjerovi b
+on b.sifra = a.smjer
+left join predavaci c
+on c.sifra=a.predavac
+inner join clanovi d on a.sifra=d.grupa
+inner join polaznici e on d.polaznik=e.sifra;
+;
+--knjiznica
+
+
+use knjiznica;
+
+select * from katalog;
+
+select a.naslov, b.ime, b.prezime,c.naziv,
+d.naziv
+from katalog a left join autor b
+on a.autor=b.sifra
+inner join izdavac c on a.izdavac=c.sifra
+inner join mjesto d on a.mjesto=d.sifra
+where a.naslov like '%ljubav%'
+;
+
+--svastara
+use svastara;
+
+select count(*) from kupci;
+
+select distinct ime, prezime from
+kupci where ime='andrea';
+
+
+
+
+--COUNT 
+
+
+select count(*) 
+from artikli 
+where cijena between 1000 and 1100;
+
+select b.*
+from opcine a inner join mjesta b
+on a.sifra=b.opcina
+where a.naziv = 'Čepin';
+
+
+update mjesta set postanskiBroj=31431 where sifra=1945;
+
+
+select b.ime, b.prezime
+from mjesta a inner join kupci b
+on b.mjesto= a.sifra
+where a.naziv='Livana';
+
+
+--COUNT
+
+
+select b.ime, b.prezime
+from mjesta a inner join kupci b
+on b.mjesto= a.sifra
+where a.naziv='Livana';
+
+
+select count(*) from primke where datum between '2017-01-01' and '2017-12-31';
+
+
+select top 1* from primke where datum between '2017-01-01' and '2017-12-31';
+
+
+
+--CIJENA NA PRIMCI , ZBRAJANJE, order by
+
+
+
+select c.kratkinaziv, b.kolicina, b.cijena, b.kolicina * b.cijena as iznos
+from primke a 
+inner join artiklinaprimci b on a.sifra= b.primka
+inner join artikli c on b.artikl = c.sifra
+where a.rednibroj = '14778/2017'
+ORDER BY 4 desc;
+
+
+--UKUPNI IZNOS SUM
+
+
+select sum (b.kolicina * b.cijena) as ukupniiznos
+from primke a 
+inner join artiklinaprimci b on a.sifra= b.primka
+inner join artikli c on b.artikl = c.sifra
+where a.rednibroj = '14778/2017';
+
+
+
+--IZNOSI NA SVEMU , poredaj 
+
+select a.rednibroj,  sum (b.kolicina * b.cijena) as ukupniiznos
+from primke a 
+inner join artiklinaprimci b on a.sifra= b.primka
+inner join artikli c on b.artikl = c.sifra
+where a.datum between '2017-01-01' and '2017-01-31'
+group by a.rednibroj
+order by 2 desc;
+
+--DODAJ DOBAVLJACE NA TO
+
+
+select a.rednibroj, d.naziv,
+sum (b.kolicina * b.cijena) as ukupniiznos
+from primke a 
+inner join artiklinaprimci b on a.sifra= b.primka
+inner join artikli c on b.artikl = c.sifra
+inner join dobavljaci d on a.dobavljac=d.sifra
+where a.datum between '2017-01-01' and '2017-01-31'
+group by a.rednibroj, d.naziv
+order by 3 desc;
+
+
+--KADA PODATAK NIJE ZAPISAN U TABLICI A HOCES GA FILTRIRATI---having sum
+
+select a.rednibroj, d.naziv,
+sum (b.kolicina * b.cijena) as ukupniiznos
+from primke a 
+inner join artiklinaprimci b on a.sifra= b.primka
+inner join artikli c on b.artikl = c.sifra
+inner join dobavljaci d on a.dobavljac=d.sifra
+where a.datum between '2017-01-01' and '2017-01-31'
+group by a.rednibroj, d.naziv
+having sum (b.kolicina * b.cijena) > 7000000;
+
+
+--AVERAGE, MINIMAL, MAXIMAL
+
+
+select a.rednibroj, d.naziv,
+sum (b.kolicina * b.cijena) as ukupniiznos,
+avg(b.kolicina * b.cijena) as prosijek,
+MIN(b.kolicina * b.cijena) as minimalno,
+MAX(b.kolicina * b.cijena) as maksimalno
+from primke a 
+inner join artiklinaprimci b on a.sifra= b.primka
+inner join artikli c on b.artikl = c.sifra
+inner join dobavljaci d on a.dobavljac=d.sifra
+where a.datum between '2017-01-01' and '2017-01-31'
+group by a.rednibroj, d.naziv
+having sum (b.kolicina * b.cijena) > 7000000;
+
+
+--SELECT COUNT
+
+select count(*) from artikli;
+
+select distinct artikl from artiklinaprimci;
+
+
+--OBRISATI I NACI NEKORISTENE ARTIKLE
+
+select * from artikli where sifra
+not in (select distinct artikl from artiklinaprimci);
+
+
+delete from artikli where sifra
+not in (select distinct artikl from artiklinaprimci);
 
