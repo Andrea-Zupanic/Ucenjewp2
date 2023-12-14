@@ -563,3 +563,99 @@ select ime as djever, brojugovora as racun
 into nova
 from polaznici; 
 
+
+--KOD ZA VISE TABLICA CONCAT/UPDATE
+
+
+update aseta.ime=concat(a.ime, 'W')
+from polaznik a
+inner join clan b on a.sifra=b.polaznik
+inner join grupa c on b.grupa=c.sifra
+inner join smjer d on c.smjer= d.sifra
+where d.naziv = 'Web programiranje';
+
+
+                                 --ZA VISE TABLICA BRISANJE 
+
+delete c
+from smjer a
+inner join grupa b on a.sifra=b.smjer
+inner join clan c on b.sifra=c.grupa
+where a.naziv='Web programiranje';
+
+
+                                --FUNKCIJE
+
+select getdate();
+
+select dateadd(day,45, getdate());
+
+select dateadd(day,-45, getdate());
+
+select upper (ime) from polaznici;
+
+select concat(ime,' ', prezime) as polaznik from polaznici
+order by;
+
+select from smjerovi;
+
+update smjerovi set cijena= ran()*1000;
+
+select rand ();
+
+                          --DODATI NOVU KOLONU S PODATCIM ALTER TABLE
+
+alter table smjer add iznos decimal (19,2);
+
+update smjerovi set iznos =1;
+
+                                       ---CREATE FUNCTION
+
+
+CREATE FUNCTION email(
+	@ime varchar(50), @prezime varchar(50)
+	)
+RETURNS varchar(150) AS
+BEGIN
+    return concat(left(lower(@ime),1), lower(
+			replace(
+			replace(
+			replace(
+			replace(
+			replace(replace(upper(@prezime),' ',''),'Č','C')
+			,'Š','S')
+			,'Đ','D')
+			,'Ć','C')
+			,'Ž','Z')
+			), '@edunova.hr');
+END;
+
+drop function email;
+
+
+select dbo.email (ime,prezime) from polaznici;
+
+                           --KOLIKO DANA SI STAR
+
+select datediff(day, '1998-03-29',getdate());
+
+
+                                      --OKIDACI
+
+create table logiranje(
+tko varchar(255),
+sto varchar(255),
+kada datetime default getdate()
+);
+
+select * from logiranje;
+CREATE TRIGGER polaznik_unos
+ON polaznici
+AFTER INSERT
+AS
+BEGIN
+	insert into logiranje (tko,sto) 
+	select 'Unos nove osobe', concat(ime, ' ', prezime) from inserted;
+END
+insert into polaznici (ime,prezime,email) 
+values ('Pero','Perić','email');
