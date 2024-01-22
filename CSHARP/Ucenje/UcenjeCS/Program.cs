@@ -1,51 +1,35 @@
 ﻿
+using UcenjeCS;
 
-/*
+//E01UlazIzlaz.Izvedi();
 
-Komentar kroz više linija - ne prporuča se 
+//E02VarijableTipoviPodatakaOperatori.Izvedi();
 
-// ispisi različitih tipova podataka
-Console.WriteLine(7); // int
-Console.WriteLine(true); //bool
-Console.Write("Prvi"); // string
-Console.Write("Drugi"); // string
-Console.WriteLine(3.14); // float
-*/
+//E03UvjetnaGrananja.Izvedi();
 
-// varijabla je prostor u memoriji
-//Console.Write("Unesi ime: ");
-//string Ime = Console.ReadLine();
+//E04Nizovi.Izvedi();
 
-//Console.WriteLine("Unijeli ste " + Ime);
+//E05ForPetlja.Izvedi();
 
+//E06WhilePetlja.Izvedi();
 
-//// TIPIČAN PROGRAM IMA
+//E07DoWhilePetlja.Izvedi();
 
-//// ulaz
-//Console.Write("Unesi visinu u centimetrima: ");
-//int Visina = int.Parse(Console.ReadLine());
+//E08ForEachPetlja.Izvedi();
 
-//// algoritam
-//float VisinaUMetrima = (float)Visina / 100;
+////09Metode.Izvedi();
 
-//// izlaz
-//Console.WriteLine("Visoki ste " + VisinaUMetrima + " metara");
+//Console.WriteLine(Z01Metode.CijeliDioZbroja(3.4,5.8));
+
+//E10ObradaIznimki.Izvedi();
+
+//E11Rekurzija.Izvedi();
+
+//Z02Vjezba.Izvedi();
 
 
-//// Učitati decimalni broj i ispisati ga
+//UcenjeCS.E12KlasaObjekt.Program.E01OsnovnaSintaksa();
 
-// Rješavati https://adventofcode.com/
+UcenjeCS.E12KlasaObjekt.Program.Izvedi();
 
-// Program unosi dužinu i širinu prostorije
-// Program ispisuje površinu prostorije
-
-Console.Write("Unesi dužinu prostorije: ");
-float Duzina = float.Parse(Console.ReadLine());
-
-Console.Write("Unesi širinu prostorije: ");
-float Sirina = float.Parse(Console.ReadLine());
-
-var Povrsina = Duzina * Sirina;
-
-Console.WriteLine(Povrsina);
 
