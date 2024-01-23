@@ -17,21 +17,7 @@ namespace UcenjeCS
                 Console.WriteLine("Edunova");
             } while (false);
 
-           
-
-            for(; ; )
-            {
-                while(true)
-                {
-                    do
-                    {
-                        goto nakon for;
-                    } while (true);
-                   
-                }
-               
-            }
-            Console.WriteLine("odradio");
+        
 
         }
     }

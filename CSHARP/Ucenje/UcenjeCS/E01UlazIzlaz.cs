@@ -37,15 +37,15 @@
 
 
 
-            Console.Write("Unesi dužinu prostorije: ");
-            float Duzina = float.Parse(Console.ReadLine());
+            //Console.Write("Unesi dužinu prostorije: ");
+            //float Duzina = float.Parse(Console.ReadLine());
 
-            Console.Write("Unesi širinu prostorije: ");
-            float Sirina = float.Parse(Console.ReadLine());
+            //Console.Write("Unesi širinu prostorije: ");
+            //float Sirina = float.Parse(Console.ReadLine());
 
-            var Povrsina = Duzina * Sirina;
+            //var Povrsina = Duzina * Sirina;
 
-            Console.WriteLine(Povrsina);
+            //Console.WriteLine(Povrsina);
 
 
 

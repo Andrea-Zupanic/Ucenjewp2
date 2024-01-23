@@ -1,7 +1,7 @@
 ﻿
 using UcenjeCS;
 
-//E01UlazIzlaz.Izvedi();
+E01UlazIzlaz.Izvedi();
 
 //E02VarijableTipoviPodatakaOperatori.Izvedi();
 
@@ -30,6 +30,6 @@ using UcenjeCS;
 
 //UcenjeCS.E12KlasaObjekt.Program.E01OsnovnaSintaksa();
 
-UcenjeCS.E12KlasaObjekt.Program.Izvedi();
+//UcenjeCS.E12KlasaObjekt.Program.Izvedi();
 
 

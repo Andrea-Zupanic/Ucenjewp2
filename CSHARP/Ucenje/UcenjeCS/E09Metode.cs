@@ -14,15 +14,15 @@ namespace UcenjeCS
 
             Tip1();
             Tip2(3, 23);
-           
+
             var Ime = ImeRacunala();
             Console.WriteLine(Ime);
             // bolje
             Console.WriteLine(ImeRacunala());
 
-            Console.WriteLine(IsPrimBroj(1200000) ? "PRIM" : "NIJE" );
+            Console.WriteLine(IsPrimBroj(1200000) ? "PRIM" : "NIJE");
 
-           
+
             SviPrimBrojevi(27, 99);
         }
 
@@ -31,7 +31,7 @@ namespace UcenjeCS
 
         private static void SviPrimBrojevi(int Od, int Do)
         {
-           for(int i = Od;i<=Do;i++)
+            for (int i = Od; i <= Do; i++)
             {
                 if (IsPrimBroj(i))
                 {
@@ -48,13 +48,13 @@ namespace UcenjeCS
             Console.WriteLine("Hello iz tip 1");
         }
 
-       
+
 
 
 
         static void Tip2(int Od, int Do)
         {
-            for(int i=Od; i<=Do; i++)
+            for (int i = Od; i <= Do; i++)
             {
                 if (i % 2 != 0)
                 {
@@ -71,23 +71,26 @@ namespace UcenjeCS
             return System.Net.Dns.GetHostName();
         }
 
-     
 
 
 
-        static bool IsPrimBroj(int Broj)
+
+        private static bool IsPrimBroj(int Broj)
         {
 
             for (int i = 2; i < Broj; i++)
             {
-                if(Broj % i == 0)
+                if (Broj % i == 0)
                 {
-                    return false; 
+                    return false;
+                }
+
+                return true;
             }
-
             return true;
-        }
 
+        }
 
     }
 }
+

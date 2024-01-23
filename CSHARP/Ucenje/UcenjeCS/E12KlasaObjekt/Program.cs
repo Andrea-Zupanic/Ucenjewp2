@@ -36,19 +36,19 @@ namespace UcenjeCS.E12KlasaObjekt
 
         }
 
-        private static void E04LjubavniPoziv()
+        //private static void E04LjubavniPoziv()
 
 
-        {
-            Ljubav ljubav = new();
-            ljubav.PrvoIme = Unos("Unesi ime prve osobe: ");
-            ljubav.DrugoIme = Unos("Unesi ime prve osobe: ");
-            Console.WriteLine(ljubav.Rezultat());
+        //{
+        //    Ljubav ljubav = new();
+        //    ljubav.PrvoIme = Unos("Unesi ime prve osobe: ");
+        //    ljubav.DrugoIme = Unos("Unesi ime prve osobe: ");
+        //    Console.WriteLine(ljubav.Rezultat());
 
-            Console.WriteLine(ljubav.Rezultat());
-            Console.WriteLine(new Ljubav(Unos("PI"), Unos("DI")).Rezultat());
+        //    Console.WriteLine(ljubav.Rezultat());
+        //    Console.WriteLine(new Ljubav(Unos("PI"), Unos("DI")).Rezultat());
 
-        }
+        //}
 
 
         //private static string Unos(string poruka)
