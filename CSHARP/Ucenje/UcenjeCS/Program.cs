@@ -1,7 +1,7 @@
 ﻿
 using UcenjeCS;
 
-E01UlazIzlaz.Izvedi();
+//E01UlazIzlaz.Izvedi();
 
 //E02VarijableTipoviPodatakaOperatori.Izvedi();
 
@@ -31,5 +31,8 @@ E01UlazIzlaz.Izvedi();
 //UcenjeCS.E12KlasaObjekt.Program.E01OsnovnaSintaksa();
 
 //UcenjeCS.E12KlasaObjekt.Program.Izvedi();
+
+UcenjeCS.E13Nasljedivanje.Program.Izvedi();
+
 
 

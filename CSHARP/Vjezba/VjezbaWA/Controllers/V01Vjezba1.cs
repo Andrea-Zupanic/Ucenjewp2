@@ -63,7 +63,7 @@ namespace VjezbaWA.Controllers
            
 
 
-
+                     
                            }
             string KonacniRezultat = Rezultat.ToString();
             return KonacniRezultat;
@@ -71,5 +71,20 @@ namespace VjezbaWA.Controllers
 
         }
 
-     }
- }
+
+
+        //[HttpGet]
+        //[Route("Vjezba2")]
+
+        //public string Vjezba2(int[])
+        //{
+        //    return "Nisam gotova";
+        //}
+
+
+
+
+
+    }
+
+}
