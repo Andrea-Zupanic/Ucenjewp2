@@ -19,9 +19,10 @@ namespace UcenjeCS.E13Nasljedivanje
             };
 
 
+            Console.WriteLine(p.Sifra );
 
 
-            // Ispisati 1 iz objekta p
+
 
             var pr1 = new Predavac();
             pr1.Ime = "Mario";
@@ -34,8 +35,7 @@ namespace UcenjeCS.E13Nasljedivanje
             Console.WriteLine((pr1 == pr2) + ", " + pr1.GetHashCode()
                 + " == " + pr2.GetHashCode());
 
-            //var e  = new Entitet(); NE MOGU INSTANCIRATI APSTRAKTNU KLASU
-            //e.Sifra = 2;
+
 
 
 
@@ -44,23 +44,22 @@ namespace UcenjeCS.E13Nasljedivanje
             a += " je super";
             Console.WriteLine("a nakon promjene: " + a.GetHashCode());
 
-            Console.WriteLine("pr1 na početku: " + pr1.GetHashCode());
-            pr1.Prezime = "Perić";
-            Console.WriteLine("pr1 nakon promjene: " + pr1.GetHashCode());
+            Console.WriteLine  ("pr1 na početku: " + pr1.GetHashCode ());
+            pr1.Prezime = "perić";
+            Console.WriteLine ("pr1 nakon promjene: " + pr1.GetHashCode ());
 
 
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine("Osijek");
-            Console.WriteLine("sb na početku: " + sb.GetHashCode());
-            sb.AppendLine(" je super");
-            Console.WriteLine("sb nakon promjene: " + sb.GetHashCode());
-            Console.WriteLine(sb.ToString());
+            StringBuilder  sb = new StringBuilder ();
+            sb.AppendLine ("osijek");
+            Console.WriteLine ("sb na početku: " + sb.GetHashCode ());
+            sb.AppendLine  (" je super");
+            Console.WriteLine( "sb nakon promjene: " + sb.GetHashCode  ());
+            Console.WriteLine (sb.ToString ());
+
+
+
 
             Console.WriteLine(pr1);
-            Console.WriteLine(p);
-
-
-
 
 
 

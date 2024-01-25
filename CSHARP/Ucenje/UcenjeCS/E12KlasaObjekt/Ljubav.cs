@@ -18,10 +18,10 @@ namespace UcenjeCS.E12KlasaObjekt
         
         }
 
-        public  Ljubav (string DrvoIme, string DrugoIme)
+        public  Ljubav (string PrvoIme, string DrugoIme)
         {
             this.PrvoIme = PrvoIme;
-            DrugoIme = DrugoIme;
+            this.DrugoIme = DrugoIme;
         }
 
 
