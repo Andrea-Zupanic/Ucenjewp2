@@ -32,7 +32,8 @@ using UcenjeCS;
 
 //UcenjeCS.E12KlasaObjekt.Program.Izvedi();
 
-UcenjeCS.E13Nasljedivanje.Program.Izvedi();
 
+//UcenjeCS.E14Polimorfizam.Program.Izvedi();
 
+new UcenjeCS.E15KonzolnaAplikacija.Program();
 
