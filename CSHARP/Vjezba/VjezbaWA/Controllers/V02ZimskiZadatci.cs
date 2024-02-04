@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Text;
 
 namespace VjezbaWA.Controllers
 {
@@ -17,31 +18,73 @@ namespace VjezbaWA.Controllers
             }
             return suma;
 
+
+        }
+
+
+
+
+
+
+
+        [HttpGet]
+        [Route("Zadatak2")]
+
+        public int[] Zadatak2()
+        {
+            int[] Niz = new int[28];
+            int broj = 0;
+
+            for (int i = 2; i <= 57; i += 2)
+            {
+                Niz[broj] = i;
+                broj++;
+            }
+
+            return Niz;
+
+        }
+
+
+        [HttpGet]
+        [Route("Zadatak3")]
+
+        public int Zadatak3()
+        {
+            int Zbroj = 0;
+            for (int i = 2; i <= 18; i += 2)
+            {
+
+                Zbroj += i; 
+
+            }
+            return Zbroj;
+        }
+
+
+
+        [HttpGet]
+        [Route("Zadatak4")]
+
+        public int Zadatak4(int broj)
+        {
+            int Zbroj = 0;
+            for (int i = 1; i <= broj; i++)
+            {
+                Zbroj++; 
+            }
+            return Zbroj;
+        }
+
+
+
+
+
         }
     }
-}
-        //[HttpGet]
-        //[Route("Zadatak2")]
-
-        //public int NizParnihBrojeva()
-        //{
-
-
-        //    for (int i = 1; i < 57; i++)
-        //    {
-
-        //        if (i % 2 == 0)
-        //        {
-        //            return i;
-        //        }
-        //    }
-        //    return;
 
 
 
-
-
-        //}
 
 
 

@@ -71,15 +71,24 @@ namespace VjezbaWA.Controllers
 
         }
 
+        [HttpPost]
+        [Route("Vjezba2")]
+        public double Vjezba2(double[] Brojevi)
+        {
+            double PB = Brojevi.First();
+            double DP = (int)(PB / 1);
+
+            double ZB = Brojevi.Last();
+            double DZ = (double)(ZB % 1);
+
+            double Rezultat = DP + DZ;
+
+            return Rezultat;
+        }
 
 
-        //[HttpGet]
-        //[Route("Vjezba2")]
 
-        //public string Vjezba2(int[])
-        //{
-        //    return "Nisam gotova";
-        //}
+
 
 
 

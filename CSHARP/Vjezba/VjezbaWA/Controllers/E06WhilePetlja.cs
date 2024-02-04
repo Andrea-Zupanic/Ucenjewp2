@@ -9,14 +9,36 @@ namespace VjezbaWA.Controllers
         [HttpGet]
         [Route("Zad1")]
 
-        public int[] Zad1 (int brojevi)
+        public int[] Zad1(int brojevi)
         {
             int[] niz = new int[brojevi];
-
+            int i = 0;
+            while (i++ < brojevi) {
+                niz[i - 1] = i;
+            }
             return niz;
 
 
-        
+        }
+
+
+        [HttpGet]
+        [Route("Zad2")]
+
+        public int Zad2(int brojevi)
+        {
+            int i = 0;
+            int suma = 0;
+
+            while(i<=brojevi)
+            {
+                suma += i;
+                i++;
+            }
+
+            return suma;
+
+        }
 
 
 
