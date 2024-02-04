@@ -12,7 +12,7 @@ using VjezbaCS;
 //E06WilePetlja.Izvedi();
 //E07DoWhilePetlja.Izvedi();
 //E08ForEachPetlja.Izvedi();
-//E09Metode.Izvedi();
+E09Metode.Izvedi();
 
 
 
