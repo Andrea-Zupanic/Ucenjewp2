@@ -18,10 +18,23 @@ namespace VjezbaCS
 
             Console.WriteLine(PrimBroj(120000) ? "Prim" : "Nije");
 
+            Sviprimbrojevi(27, 99);
+
 
         }
 
+        private static void Sviprimbrojevi(int Od, int Do)
+        {
 
+           for( int i = Od; i <= Do; i++)
+            {
+                if (PrimBroj(i))
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
+        }
 
         static void Tip1()
         {

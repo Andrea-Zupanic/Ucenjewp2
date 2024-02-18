@@ -12,7 +12,9 @@ using VjezbaCS;
 //E06WilePetlja.Izvedi();
 //E07DoWhilePetlja.Izvedi();
 //E08ForEachPetlja.Izvedi();
-E09Metode.Izvedi();
+//E09Metode.Izvedi();
+Console.WriteLine(Z01Metode.Cijelidio(2.7F, 3.7F)); 
+
 
 
 

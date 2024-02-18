@@ -13,7 +13,8 @@ namespace VjezbaWA.Controllers
         {
             int[] niz = new int[brojevi];
             int i = 0;
-            while (i++ < brojevi) {
+            while (i++ < brojevi)
+            {
                 niz[i - 1] = i;
             }
             return niz;
@@ -30,7 +31,7 @@ namespace VjezbaWA.Controllers
             int i = 0;
             int suma = 0;
 
-            while(i<=brojevi)
+            while (i <= brojevi)
             {
                 suma += i;
                 i++;
