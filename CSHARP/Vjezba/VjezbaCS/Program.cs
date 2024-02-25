@@ -13,7 +13,11 @@ using VjezbaCS;
 //E07DoWhilePetlja.Izvedi();
 //E08ForEachPetlja.Izvedi();
 //E09Metode.Izvedi();
-Console.WriteLine(Z01Metode.Cijelidio(2.7F, 3.7F)); 
+//Console.WriteLine(Z01Metode.Cijelidio(2.7F, 3.7F)); 
+//E10ObradaIznimki.Izvedi();
+//E11Rekurzija.Izvedi();
+//Z02Vjezba.Izvedi();
+
 
 
 
